@@ -5,7 +5,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="25dp"
         android:clickable="true"
         android:orientation="horizontal">
 
@@ -24,9 +24,9 @@
             android:checked="true"
             android:gravity="center_vertical"
 
-            android:text="Christopher"
+            android:text="something something"
             android:textColor="@color/textColor"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Space
             android:layout_width="0dp"
@@ -40,12 +40,13 @@
 
             android:layout_weight="0.25"
 
+            android:textAlignment="textEnd"
             android:gravity="center_vertical"
             android:text="$999,999.99"
 
 
             android:textColor="@color/textColor"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Space
             android:layout_width="0dp"

@@ -26,7 +26,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
 
-                android:layout_weight="0.6"
+                android:layout_weight="0.53"
 
                 android:checked="true"
                 android:gravity="left"
@@ -34,12 +34,12 @@
                 android:text="Subtotal:"
                 android:textStyle="bold"
                 android:textColor="@color/textColor"
-                android:textSize="@dimen/text_size" />
+                android:textSize="@dimen/bold_text_size" />
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.05" />
+                android:layout_weight="0.14" />
 
             <TextView
                 android:id="@+id/overview_subtotal"
@@ -59,7 +59,7 @@
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.05" />
+                android:layout_weight="0.03" />
 
         </LinearLayout>
 
@@ -78,7 +78,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
 
-                android:layout_weight="0.6"
+                android:layout_weight="0.53"
 
                 android:checked="true"
                 android:gravity="left"
@@ -86,12 +86,12 @@
                 android:text="Tax:"
                 android:textStyle="bold"
                 android:textColor="@color/textColor"
-                android:textSize="@dimen/text_size" />
+                android:textSize="@dimen/bold_text_size" />
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.05" />
+                android:layout_weight="0.14" />
 
             <TextView
                 android:id="@+id/overview_tax"
@@ -111,7 +111,7 @@
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.05" />
+                android:layout_weight="0.03" />
 
         </LinearLayout>
 
@@ -130,7 +130,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
 
-                android:layout_weight="0.6"
+                android:layout_weight="0.53"
 
                 android:checked="true"
                 android:gravity="left"
@@ -138,12 +138,12 @@
                 android:text="Tip:"
                 android:textStyle="bold"
                 android:textColor="@color/textColor"
-                android:textSize="@dimen/text_size" />
+                android:textSize="@dimen/bold_text_size" />
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.05" />
+                android:layout_weight="0.14" />
 
             <TextView
                 android:id="@+id/overview_tip"
@@ -163,7 +163,7 @@
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.05" />
+                android:layout_weight="0.03" />
 
         </LinearLayout>
 

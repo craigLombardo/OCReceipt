@@ -7,7 +7,7 @@
     tools:context="com.craiglombardo.ocreceipt.OverviewPage">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/tmp"
+        android:id="@+id/selection_app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
@@ -23,11 +23,10 @@
     </android.support.design.widget.AppBarLayout>
 
     <ScrollView
-        android:id="@+id/selection_test"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingTop="?attr/actionBarSize"
-        app:layout_constraintTop_toBottomOf="@id/tmp">
+        app:layout_constraintTop_toBottomOf="@id/selection_app_bar">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -39,12 +38,15 @@
                 android:id="@+id/selection_scroll_pane"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:clickable="true"
-                android:focusable="true"
                 android:orientation="vertical">
 
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+
+                app:layout_constraintTop_toBottomOf="@id/selection_scroll_pane" />
 
         </android.support.constraint.ConstraintLayout>
 
@@ -52,8 +54,4 @@
 
 </android.support.constraint.ConstraintLayout>
 
-<!--<View-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="?attr/actionBarSize"-->
 
-<!--app:layout_constraintTop_toBottomOf="@id/overview_scroll_pane" />-->

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 public class OverviewPage extends AppCompatActivity {
 
     private LinearLayout parentLinearLayout;
+    private int screenHalf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,8 @@ public class OverviewPage extends AppCompatActivity {
         parentLinearLayout = findViewById(R.id.overview_scroll_pane);
 
         createHeaders();
+
+        screenHalf = getResources().getDisplayMetrics().widthPixels / 2;
 
     }
 
@@ -122,12 +126,16 @@ public class OverviewPage extends AppCompatActivity {
             items = new ArrayList<>();
             prices = new ArrayList<>();
 
-            row.setOnClickListener(new View.OnClickListener() {
+            row.setOnTouchListener(new View.OnTouchListener() {
                 @Override
-                public void onClick(View view) {
-                    if (expanded) collapseItems();
-                    else inflateItems();
+                public boolean onTouch(View v, MotionEvent event) {
+                    if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                        if (event.getX() <= screenHalf) collapseItems();
+                        else inflateItems();
+                    }
+                    return true;
                 }
+
             });
         }
 
@@ -143,6 +151,7 @@ public class OverviewPage extends AppCompatActivity {
         }
 
         private void inflateItems() {
+            if (expanded) return;
 
             LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -167,9 +176,10 @@ public class OverviewPage extends AppCompatActivity {
         }
 
         private void collapseItems() {
-
+            if (!expanded) return;
             for (int i = row.getChildCount() - 1; i >= 2; i--) row.removeViewAt(i);
             expanded = false;
         }
     }
+
 }

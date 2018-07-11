@@ -3,9 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/tip_percent_sign"
-        android:icon="@drawable/ic_percent_sign"
+        android:id="@+id/selection_remove"
+        android:icon="@drawable/ic_remove"
         android:title=""
         app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/selection_add"
+        android:icon="@drawable/ic_add"
+        android:title=""
+        app:showAsAction="always"/>
+
 
 </menu>

@@ -6,6 +6,11 @@
     <color name="colorBlack">#000000</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="textColor">#000000</color>
+
+    <color name="selectedColor">#9daae2</color>
+
+    <color name="colorAdd">#515b9e</color>
+    <color name="colorSubtract">#9f4043</color>
 </resources>
 
 

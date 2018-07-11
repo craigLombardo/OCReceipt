@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -60,6 +59,9 @@ public class OverviewPage extends AppCompatActivity {
 
     private void createHeaders() {
         LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        final View headerView = inflater.inflate(R.layout.overview_header, null);
+        parentLinearLayout.addView(headerView, parentLinearLayout.getChildCount());
 
         final View firstView = inflater.inflate(R.layout.overview_line_header, null);
         final View secondView = inflater.inflate(R.layout.overview_line_header, null);
@@ -126,17 +128,17 @@ public class OverviewPage extends AppCompatActivity {
             items = new ArrayList<>();
             prices = new ArrayList<>();
 
-            row.setOnTouchListener(new View.OnTouchListener() {
+            row.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                        if (event.getX() <= screenHalf) collapseItems();
-                        else inflateItems();
-                    }
-                    return true;
+                public void onClick(View view) {
+                    toggle();
                 }
-
             });
+        }
+
+        private void toggle() {
+            if (expanded) collapseItems();
+            else inflateItems();
         }
 
         private void addItem(String item, double cost) {
@@ -151,8 +153,6 @@ public class OverviewPage extends AppCompatActivity {
         }
 
         private void inflateItems() {
-            if (expanded) return;
-
             LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             for (int i = 0; i < items.size(); i++) {
@@ -176,7 +176,6 @@ public class OverviewPage extends AppCompatActivity {
         }
 
         private void collapseItems() {
-            if (!expanded) return;
             for (int i = row.getChildCount() - 1; i >= 2; i--) row.removeViewAt(i);
             expanded = false;
         }

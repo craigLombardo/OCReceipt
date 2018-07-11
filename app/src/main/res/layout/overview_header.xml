@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/overview_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:paddingTop="@dimen/header_padding"
+            android:paddingBottom="@dimen/header_padding">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.03" />
+
+            <TextView
+                android:id="@+id/overview_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="0.55"
+
+                android:checked="true"
+                android:gravity="center_vertical"
+
+                android:text="Person"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.03" />
+
+            <TextView
+                android:id="@+id/line_count"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="0.08"
+
+                android:gravity="center"
+                android:text="#"
+
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.03" />
+
+            <TextView
+                android:id="@+id/line_total"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="0.25"
+
+                android:gravity="center"
+                android:textAlignment="textEnd"
+                android:text="Cost"
+
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.03" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bottom_border"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorHeader" />
+    </LinearLayout>
+
+</LinearLayout>

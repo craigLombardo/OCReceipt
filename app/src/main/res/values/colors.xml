@@ -9,8 +9,7 @@
 
     <color name="selectedColor">#9daae2</color>
 
-    <color name="colorAdd">#515b9e</color>
-    <color name="colorSubtract">#9f4043</color>
+    <color name="colorHeader">#9f4043</color>
 </resources>
 
 

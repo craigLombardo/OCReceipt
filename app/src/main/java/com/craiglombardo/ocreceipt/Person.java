@@ -1,6 +1,7 @@
 package com.craiglombardo.ocreceipt;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -21,13 +22,17 @@ public class Person {
     private LinearLayout listParent;
     private LinearLayout listRow;
 
+    private Button inlineButton;
 
-    public Person(View view, String name) {
+
+    public Person(View view, String name, Button ib) {
         listParent = view.findViewById(R.id.line_item_list);
         listRow = view.findViewById(R.id.line_header);
 
         TextView fullName = listRow.findViewById(R.id.line_name);
         fullName.setText(name);
+
+        inlineButton = ib;
 
         itemsCount = 0;
         itemsList = new TreeMap<>();
@@ -107,9 +112,12 @@ public class Person {
         } else return false;
     }
 
+    public void rotateButton(Boolean up) {
+        inlineButton.setBackgroundResource(up ? R.drawable.ic_up : R.drawable.ic_down);
+    }
 
     public static void main(String[] args) {
-        Person p1 = new Person(null, "Craig");
+        Person p1 = new Person(null, "Craig", null);
 
         p1.addItem("Item 1", 12.00);
         p1.addItem("Item 2", 122.00);

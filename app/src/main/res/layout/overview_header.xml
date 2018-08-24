@@ -20,20 +20,20 @@
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.03" />
+                android:layout_weight="0.05" />
 
             <TextView
                 android:id="@+id/overview_name"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
 
-                android:layout_weight="0.55"
+                android:layout_weight="0.64"
 
                 android:checked="true"
                 android:gravity="center_vertical"
 
                 android:text="Person"
-                android:textColor="@color/textColor"
+                android:textColor="@color/itemColor"
                 android:textSize="@dimen/bold_text_size"
                 android:textStyle="bold" />
 
@@ -47,12 +47,12 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
 
-                android:layout_weight="0.08"
+                android:layout_weight="0.05"
 
                 android:gravity="center"
                 android:text="#"
 
-                android:textColor="@color/textColor"
+                android:textColor="@color/itemColor"
                 android:textSize="@dimen/bold_text_size"
                 android:textStyle="bold" />
 
@@ -66,20 +66,19 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
 
-                android:layout_weight="0.25"
+                android:layout_weight="0.15"
 
-                android:gravity="center"
                 android:text="Cost"
                 android:textAlignment="textEnd"
 
-                android:textColor="@color/textColor"
+                android:textColor="@color/itemColor"
                 android:textSize="@dimen/bold_text_size"
                 android:textStyle="bold" />
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.03" />
+                android:layout_weight="0.05" />
 
         </LinearLayout>
 

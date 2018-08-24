@@ -6,73 +6,108 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:clickable="false"
+        android:orientation="vertical">
 
-        android:paddingTop="@dimen/line_item_padding"
-        android:paddingBottom="@dimen/line_item_padding">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:orientation="horizontal"
 
-        <Space
-            android:layout_width="0dp"
+            android:paddingBottom="@dimen/line_item_padding"
+            android:paddingTop="@dimen/line_item_padding">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1" />
+
+            <TextView
+                android:id="@+id/line_item_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="0.59"
+
+                android:checked="true"
+                android:gravity="center_vertical"
+
+                android:text="The quick brown fox jumped over"
+                android:lines="1"
+                android:textColor="@color/itemColor"
+                android:textSize="@dimen/text_size" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.03" />
+
+            <TextView
+                android:id="@+id/line_count"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="0.05"
+
+                android:gravity="center"
+                android:text="99"
+
+                android:textColor="@color/itemColor"
+                android:textSize="@dimen/text_size" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.03" />
+
+            <TextView
+                android:id="@+id/line_item_total"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="0.15"
+
+                android:text="$999.99"
+                android:textAlignment="textEnd"
+
+
+                android:textColor="@color/itemColor"
+                android:textSize="@dimen/text_size" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.03" />
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/line_item_name"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
 
-            android:layout_weight="0.55"
+                android:layout_weight="0.1" />
 
-            android:checked="true"
-            android:gravity="center_vertical"
+            <View
+                android:id="@+id/bottom_border"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
 
-            android:text="something something"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/text_size" />
+                android:layout_weight=".85"
 
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.03" />
+                android:background="@color/itemBorder" />
 
-        <TextView
-            android:id="@+id/line_count"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
 
-            android:layout_weight="0.08"
-
-            android:gravity="center"
-            android:text="4"
-
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/text_size" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.03" />
-
-        <TextView
-            android:id="@+id/line_item_total"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-
-            android:layout_weight="0.25"
-
-            android:gravity="center_vertical"
-            android:text="$99,999.99"
-            android:textAlignment="textEnd"
-
-
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/text_size" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.03" />
+                android:layout_weight="0.05"
+                android:paddingBottom="@dimen/line_item_padding"/>
+        </LinearLayout>
 
     </LinearLayout>
 

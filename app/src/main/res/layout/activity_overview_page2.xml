@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.craiglombardo.ocreceipt.OverviewPage">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/overview_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/overview_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Log Time" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:paddingTop="?attr/actionBarSize"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:indicatorRight="?android:attr/expandableListPreferredItemIndicatorRight"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp"
+        />
+
+</android.support.constraint.ConstraintLayout>
+
+

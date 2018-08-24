@@ -7,10 +7,10 @@
         android:id="@+id/line_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/selectableItemBackground"
 
         android:orientation="vertical"
-        android:theme="@style/AppTheme.SelectionRipple">
+
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,14 +20,14 @@
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_weight="0.03"
+                android:layout_weight="0.05"
                 android:background="@color/colorAccent" />
 
             <TextView
                 android:id="@+id/line_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.97"
+                android:layout_weight="0.85"
 
                 android:checked="true"
                 android:gravity="center_vertical"
@@ -35,18 +35,57 @@
                 android:paddingBottom="@dimen/line_item_padding"
                 android:paddingTop="@dimen/line_item_padding"
                 android:text="Christopher Hoeflinger"
-                android:textColor="@color/textColor"
+                android:textColor="@color/itemColor"
 
                 android:textSize="@dimen/bold_text_size"
                 android:textStyle="bold" />
 
+            <Button
+                android:id="@+id/drop_down"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+
+                android:layout_weight="0.05"
+
+                android:background="@drawable/ic_down"
+                android:backgroundTint="@color/itemColor"
+                android:enabled="false"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+
+                android:layout_weight="0.05" />
+
         </LinearLayout>
 
-        <View
-            android:id="@+id/bottom_border"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/colorAccent" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+
+                android:layout_weight="0.05" />
+
+            <View
+                android:id="@+id/bottom_border"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+
+                android:layout_weight=".9"
+
+                android:background="@color/itemBorder" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+
+                android:layout_weight="0.05" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/line_item_list"
@@ -59,3 +98,6 @@
     </LinearLayout>
 
 </LinearLayout>
+
+    <!--android:background="?attr/selectableItemBackground"-->
+    <!--android:theme="@style/AppTheme.SelectionRipple"-->

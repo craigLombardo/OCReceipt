@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -89,6 +90,14 @@ public class OverviewPage extends AppCompatActivity {
             if (i % 2 == 0) p2.increaseItemCount("Item: " + i);
             if (i % 3 == 0) p3.increaseItemCount("Item: " + i);
         }
+
+        inflatePerson(p1);
+
+        inflatePerson(p2);
+
+        inflatePerson(p3);
+
+//        System.out.println(expandedPerson);
 
 //        parentLinearLayout.addView(firstView, parentLinearLayout.getChildCount());
 //        parentLinearLayout.addView(secondView, parentLinearLayout.getChildCount());
@@ -209,6 +218,9 @@ public class OverviewPage extends AppCompatActivity {
 //    }
 
     private void inflatePerson(Person person) {
+        if (person == null) return;
+        person.rotateButton(true);
+
         LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         Set personSet = person.getItemsList().entrySet();
@@ -240,33 +252,77 @@ public class OverviewPage extends AppCompatActivity {
 //        sub.setText("" + totalCost);
 //        listParent.addView(totalView);
 //
-//        if (collapseOther) expandedPerson.collapseItems();
 
-        expandedPerson = person;
+        hidePerson(person);
     }
 
     private void collapsePerson(Person person) {
+        if (person == null) return;
+        person.rotateButton(false);
         LinearLayout listParent = person.getListParent();
         for (int i = listParent.getChildCount() - 1; i >= 0; i--) listParent.removeViewAt(i);
         expandedPerson = null;
     }
 
+    /**
+     *
+     * TEST
+     *
+     */
+
+
+    private void hidePerson(Person person) {
+        if (person == null) return;
+        person.rotateButton(false);
+        LinearLayout listParent = person.getListParent();
+        for (int i = listParent.getChildCount() - 1; i >= 0; i--) listParent.setVisibility(View.GONE);
+        expandedPerson = null;
+    }
+
+    private void showPerson(Person person) {
+        if (person == null) return;
+        person.rotateButton(true);
+        LinearLayout listParent = person.getListParent();
+        for (int i = listParent.getChildCount() - 1; i >= 0; i--) listParent.setVisibility(View.VISIBLE);
+        expandedPerson = person;
+    }
+
     private void toggle(Person p) {
         if (expandedPerson != null) {
             if (expandedPerson == p) {
-                collapsePerson(expandedPerson);
+                hidePerson(expandedPerson);
                 return;
             }
-            collapsePerson(expandedPerson);
+            hidePerson(expandedPerson);
         }
-        inflatePerson(p);
+        showPerson(p);
     }
+
+
+    /**
+     *
+     * TEST
+     *
+     */
+
+//    private void toggle(Person p) {
+//        if (expandedPerson != null) {
+//            if (expandedPerson == p) {
+//                collapsePerson(expandedPerson);
+//                return;
+//            }
+//            collapsePerson(expandedPerson);
+//        }
+//        inflatePerson(p);
+//    }
 
     private Person createPerson(String personName) {
         LayoutInflater pInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         final View pView = pInflater.inflate(R.layout.overview_line_header, null);
 
-        final Person p = new Person(pView, personName);
+        Button pDropDown = pView.findViewById(R.id.drop_down);
+
+        final Person p = new Person(pView, personName, pDropDown);
 
         pView.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -3,7 +3,6 @@ package com.craiglombardo.ocreceipt;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import java.util.Iterator;
 import java.util.Map;
@@ -24,13 +23,9 @@ public class Person {
 
     private Button inlineButton;
 
-
     public Person(View view, String name, Button ib) {
         listParent = view.findViewById(R.id.line_item_list);
         listRow = view.findViewById(R.id.line_header);
-
-        TextView fullName = listRow.findViewById(R.id.line_name);
-        fullName.setText(name);
 
         inlineButton = ib;
 

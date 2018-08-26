@@ -18,7 +18,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:title="Log Time" />
+            app:title="@string/overview_page_header" />
 
     </android.support.design.widget.AppBarLayout>
 

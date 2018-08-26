@@ -13,216 +13,214 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/subtotal_padding"
+            android:paddingTop="@dimen/subtotal_padding">
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.03" />
+                android:layout_weight="0.12" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
 
-                android:layout_weight="0.55"
+                android:layout_weight="0.68"
 
                 android:checked="true"
-                android:gravity="left"
 
                 android:text="Subtotal:"
-                android:textStyle="bold"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/bold_text_size" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.14" />
+                android:textColor="@color/subtotalColor"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/overview_subtotal"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
 
-                android:layout_weight="0.25"
+                android:layout_weight="0.15"
 
+                android:text="999.99"
                 android:textAlignment="textEnd"
-                android:gravity="center_vertical"
-                android:text="$999,999.99"
 
-
-                android:textColor="@color/textColor"
+                android:textColor="@color/subtotalColor"
                 android:textSize="@dimen/text_size" />
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.03" />
+                android:layout_weight="0.05" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/subtotal_padding"
+            android:paddingTop="@dimen/subtotal_padding">
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.03" />
+                android:layout_weight="0.12" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
 
-                android:layout_weight="0.55"
+                android:layout_weight="0.68"
 
                 android:checked="true"
-                android:gravity="left"
-
                 android:text="Tax:"
-                android:textStyle="bold"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/bold_text_size" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.14" />
+                android:textAlignment="textStart"
+                android:textColor="@color/subtotalColor"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/overview_tax"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
 
-                android:layout_weight="0.25"
+                android:layout_weight="0.15"
 
+                android:text="999.99"
                 android:textAlignment="textEnd"
-                android:gravity="center_vertical"
-                android:text="$999,999.99"
 
-
-                android:textColor="@color/textColor"
+                android:textColor="@color/subtotalColor"
                 android:textSize="@dimen/text_size" />
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.03" />
+                android:layout_weight="0.05" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/subtotal_padding"
+            android:paddingTop="@dimen/subtotal_padding">
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.03" />
+                android:layout_weight="0.12" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
 
-                android:layout_weight="0.55"
+                android:layout_weight="0.68"
 
                 android:checked="true"
-                android:gravity="left"
-
                 android:text="Tip:"
-                android:textStyle="bold"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/bold_text_size" />
+                android:textAlignment="textStart"
+                android:textColor="@color/subtotalColor"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
 
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.14" />
 
             <TextView
                 android:id="@+id/overview_tip"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
 
-                android:layout_weight="0.25"
+                android:layout_weight="0.15"
 
+                android:text="999.99"
                 android:textAlignment="textEnd"
-                android:gravity="center_vertical"
-                android:text="$999,999.99"
 
-
-                android:textColor="@color/textColor"
+                android:textColor="@color/subtotalColor"
                 android:textSize="@dimen/text_size" />
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.03" />
+                android:layout_weight="0.05" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/subtotal_padding"
+            android:paddingTop="@dimen/subtotal_padding">
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.03" />
+                android:layout_weight="0.12" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
 
-                android:layout_weight="0.55"
+                android:layout_weight="0.68"
 
                 android:checked="true"
-                android:gravity="left"
 
                 android:text="Total:"
-                android:textStyle="bold"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/bold_text_size" />
+                android:textAlignment="textStart"
+                android:textColor="@color/subtotalColor"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
 
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.14" />
 
             <TextView
                 android:id="@+id/overview_total"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
 
-                android:layout_weight="0.25"
+                android:layout_weight="0.15"
 
+                android:text="999.99"
                 android:textAlignment="textEnd"
-                android:gravity="center_vertical"
-                android:text="$999,999.99"
 
-
-                android:textColor="@color/textColor"
+                android:textColor="@color/subtotalColor"
                 android:textSize="@dimen/text_size" />
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.03" />
+                android:layout_weight="0.05" />
 
         </LinearLayout>
 
-        <View
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/colorAccent" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="4dp" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+
+                android:layout_weight="0.09" />
+
+            <View
+                android:id="@+id/bottom_border"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+
+                android:layout_weight=".86"
+
+                android:background="@color/subtotalBorder" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+
+                android:layout_weight="0.05"
+                android:paddingBottom="@dimen/subtotal_padding" />
+        </LinearLayout>
 
     </LinearLayout>
 

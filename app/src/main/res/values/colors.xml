@@ -7,12 +7,20 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="textColor">#000000</color>
 
+    <color name="menuFillColor">#80000000</color>
+
     <color name="itemColor">#616161</color>
     <color name="itemBorder">#bdbdbd</color>
 
     <color name="selectedColor">#9daae2</color>
 
     <color name="colorHeader">#9f4043</color>
+
+    <color name="subtotalColor">#616161</color>
+    <color name="subtotalBorder">#bdbdbd</color>
+
+    <color name="selectedBackground">#325c6bc0</color>
+
 </resources>
 
 

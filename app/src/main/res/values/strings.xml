@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">OCReceipt</string>
+
+    <string name="overview_page_header">Overview</string>
+
+    <string name="menu_tax_title">Tax Percentage</string>
+    <string name="menu_tip_title">Tip Percentage</string>
+
 </resources>

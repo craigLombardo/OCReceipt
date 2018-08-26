@@ -9,9 +9,12 @@ public class Item {
     private int itemQuantity;
     private double itemPrice;
 
+
     public Item(Double cost) {
 
         itemQuantity = 1;
+
+
         itemPrice = cost;
 
     }

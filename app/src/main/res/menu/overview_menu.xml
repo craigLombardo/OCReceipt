@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".OverviewPage">
 
     <item
-        android:id="@+id/tip_percent_sign"
-        android:icon="@drawable/ic_percent_sign"
-        android:title=""
-        app:showAsAction="always"/>
-
+        android:title="three_dots"
+        android:id="@+id/action_notification1"
+        android:icon="@drawable/ic_three_dots"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/menu_tax"
+                android:icon="@drawable/ic_attach_money_black_24dp"
+                android:orderInCategory="100"
+                android:title="@string/menu_tax_title"
+                />
+            <item
+                android:id="@+id/menu_tip"
+                android:icon="@drawable/ic_insert_emoticon_black_24dp"
+                android:orderInCategory="100"
+                android:title="@string/menu_tip_title" />
+        </menu>
+    </item>
 </menu>
+
+    <!--android:orderInCategory="100"-->

@@ -6,4 +6,6 @@
     <string name="menu_tax_title">Tax Percentage</string>
     <string name="menu_tip_title">Tip Percentage</string>
 
+    <string name="tip_type_percent_string">Percentage</string>
+    <string name="tip_type_manual_string">Manual</string>
 </resources>

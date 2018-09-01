@@ -8,7 +8,13 @@
     <dimen name="header_padding">10dp</dimen>
     <dimen name="line_item_padding">2dp</dimen>
     <dimen name="subtotal_padding">1dp</dimen>
-    <dimen name="text_size">14sp</dimen>
+    <dimen name="text_size">15sp</dimen>
     <dimen name="bold_text_size">16sp</dimen>
+
+    <!---These dimensions will be used to control the size of the pop up elements-->
+
+    <dimen name="popup_header_text_size">20dp</dimen>
+    <dimen name="popup_header_left_padding">15dp</dimen>
+    <dimen name="popup_string_size">16dp</dimen>
 
 </resources>

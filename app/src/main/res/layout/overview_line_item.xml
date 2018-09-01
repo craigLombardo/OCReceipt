@@ -80,34 +80,35 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-
-                android:layout_weight="0.12" />
-
-            <View
-                android:id="@+id/bottom_border"
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-
-                android:layout_weight=".83"
-
-                android:background="@color/itemBorder" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-
-                android:layout_weight="0.05"
-                android:paddingBottom="@dimen/line_item_padding" />
-        </LinearLayout>
-
     </LinearLayout>
 
 </LinearLayout>
+
+<!--Bottom Line-->
+<!--<LinearLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--android:orientation="horizontal">-->
+
+<!--<View-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="1dp"-->
+
+    <!--android:layout_weight="0.12" />-->
+
+<!--<View-->
+    <!--android:id="@+id/bottom_border"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="1dp"-->
+
+    <!--android:layout_weight=".83"-->
+
+    <!--android:background="@color/itemBorder" />-->
+
+<!--<View-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="1dp"-->
+
+    <!--android:layout_weight="0.05"-->
+    <!--android:paddingBottom="@dimen/line_item_padding" />-->
+<!--</LinearLayout>-->

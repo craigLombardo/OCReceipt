@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/header_padding">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05" />
+
+        <RadioButton
+            android:id="@+id/tip_percent_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.68"
+            android:checked="true"
+            android:text="@string/tip_type_percent_string"
+            android:textSize="@dimen/popup_string_size" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.02" />
+
+        <EditText
+
+            android:id="@+id/tip_percent_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:text="100"
+            android:textSize="@dimen/popup_string_size" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05" />
+
+        <RadioButton
+            android:id="@+id/tip_manual_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.68"
+            android:checked="false"
+            android:text="@string/tip_type_manual_string"
+            android:textSize="@dimen/popup_string_size" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.02" />
+
+        <EditText
+            android:id="@+id/tip_manual_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:text="1000"
+            android:textSize="@dimen/popup_string_size" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_padding" />
+
+</LinearLayout>
+
+    <!--<SeekBar--><!--android:id="@+id/seekBar"--><!--style="@style/Widget.AppCompat.SeekBar.Discrete"--><!--android:layout_width="0dp"--><!--android:layout_height="wrap_content"-->
+
+    <!--android:layout_weight="0.7"-->
+
+    <!--android:max="100"--><!--android:min="0"--><!--android:progress="50"--><!--android:layout_gravity="center_vertical"/>-->

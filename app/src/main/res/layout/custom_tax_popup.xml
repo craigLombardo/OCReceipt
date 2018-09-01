@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/header_padding">
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.35" />
+
+    <EditText
+        android:id="@+id/tax_percent_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"
+        android:text="100"
+        android:textSize="@dimen/popup_string_size" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.35" />
+
+</LinearLayout>
+
+
+    <!--<SeekBar--><!--android:id="@+id/seekBar"--><!--style="@style/Widget.AppCompat.SeekBar.Discrete"--><!--android:layout_width="0dp"--><!--android:layout_height="wrap_content"-->
+
+    <!--android:layout_weight="0.7"-->
+
+    <!--android:max="100"--><!--android:min="0"--><!--android:progress="50"--><!--android:layout_gravity="center_vertical"/>-->

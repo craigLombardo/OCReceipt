@@ -26,6 +26,11 @@ public class OverviewPage extends AppCompatActivity {
 
     private double taxPercent;
     private double tipPercent;
+    private double tipManual;
+    private boolean isPercent;
+
+    private TipPopup tipFragment;
+    private TaxPopup taxFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +39,10 @@ public class OverviewPage extends AppCompatActivity {
 
         deci = new DecimalFormat("0.00");
 
-        taxPercent = 0.07;
-        tipPercent = 0.2;
+        isPercent = true;
+        tipManual = 0.0;
+        taxPercent = 7.0;
+        tipPercent = 20.0;
 
         android.support.v7.widget.Toolbar toolbar = findViewById(R.id.overview_toolbar);
         setSupportActionBar(toolbar);
@@ -44,6 +51,9 @@ public class OverviewPage extends AppCompatActivity {
         parentLinearLayout = findViewById(R.id.overview_scroll_pane);
 
         createHeaders();
+
+        tipFragment = new TipPopup();
+        taxFragment = new TaxPopup();
 
 //        screenHalf = getResources().getDisplayMetrics().widthPixels / 2;
 
@@ -62,11 +72,13 @@ public class OverviewPage extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.menu_tax:
                 //Insert Functionality here
-                System.out.println("Tax Pressed");
+                taxFragment.show(getFragmentManager(), "" + taxPercent);
+                taxFragment.setHome(this);
                 return true;
             case R.id.menu_tip:
                 //Insert Functionality here
-                System.out.println("Tip Pressed");
+                tipFragment.show(getFragmentManager(), "" + isPercent + "," + tipPercent + "," + tipManual);
+                tipFragment.setHome(this);
                 return true;
             case android.R.id.home:
                 finish();
@@ -152,11 +164,11 @@ public class OverviewPage extends AppCompatActivity {
         TextView subtotal = totalView.findViewById(R.id.overview_subtotal);
         subtotal.setText("" + deci.format(person.getItemsTotal()));
 
-        Double taxAddition = person.getItemsTotal() * taxPercent;
+        Double taxAddition = person.getItemsTotal() * (taxPercent / 100);
         TextView taxTotal = totalView.findViewById(R.id.overview_tax);
         taxTotal.setText("" + deci.format(taxAddition));
 
-        Double tipAddition = person.getItemsTotal() * tipPercent;
+        Double tipAddition = person.getItemsTotal() * (tipPercent / 100);
         TextView tipTotal = totalView.findViewById(R.id.overview_tip);
         tipTotal.setText("" + deci.format(tipAddition));
 
@@ -242,6 +254,15 @@ public class OverviewPage extends AppCompatActivity {
         return p;
     }
 
+    public void setTaxPercent(double newP) {
+        taxPercent = newP;
+    }
+
+    public void setTipInformation(boolean isTipPercent, double newPercent, double newManual) {
+        isPercent = isTipPercent;
+        tipPercent = newPercent;
+        tipManual = newManual;
+    }
 }
 
 
